@@ -25,7 +25,14 @@ export type IconName =
   | 'chat'
   | 'globe'
   | 'mail'
-  | 'phone';
+  | 'phone'
+  | 'gift'
+  | 'house'
+  | 'link'
+  | 'heart'
+  | 'cap'
+  | 'music'
+  | 'ticket';
 
 export interface ImageData {
   /** Path inside `public/`, e.g. `/images/class-hatha.webp`. */
@@ -38,17 +45,6 @@ export interface SocialLink {
   label: string;
   href: string;
   icon: IconName;
-}
-
-export interface OpeningHours {
-  /** Visible label, e.g. "Mon to Fri". */
-  label: string;
-  /** Visible hours, e.g. "6:00 to 21:00". */
-  hours: string;
-  /** Machine-readable values for structured data. */
-  days: Array<'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday' | 'Sunday'>;
-  opens: string;
-  closes: string;
 }
 
 export interface SiteConfig {
@@ -82,7 +78,6 @@ export interface SiteConfig {
       country: string;
     };
   };
-  hours: OpeningHours[];
   socials: SocialLink[];
   /** Where "Book" / "Reserve" buttons point when an item has no URL of its own. */
   bookingUrl: string;
@@ -131,33 +126,25 @@ export interface CallToAction {
   href: string;
 }
 
-export interface YogaClass {
+export interface DanceClass {
   title: string;
   description: string;
   image: ImageData;
   /** Short badge on the image, e.g. "All levels". */
   level: string;
-  duration: string;
-  intensity: string;
+  /** duration: string;
+  intensity: string; **/
   href?: string;
 }
 
 export interface ScheduleItem {
+  date: string;
   time: string;
-  period: 'am' | 'pm';
-  className: string;
-  instructor: string;
-  duration: string;
-  level?: string;
+  eventName: string;
+  location: string;
+  addDetail?: string;
   bookingUrl?: string;
-}
-
-export interface ScheduleDay {
-  /** Short label for the day button, e.g. "Mon". */
-  short: string;
-  /** Full name used for screen readers and the no-JS fallback. */
-  name: string;
-  classes: ScheduleItem[];
+  reserveLabel?: string;
 }
 
 export interface Coach {
@@ -181,6 +168,7 @@ export interface FocusArea {
 export interface VisitStep {
   title: string;
   description: string;
+  icon?: string;
 }
 
 export interface PricingPlan {
@@ -210,13 +198,9 @@ export interface GalleryImage extends ImageData {
 export interface Retreat {
   title: string;
   description: string;
-  /** ISO date, e.g. `2026-11-14`. */
-  date: string;
-  location: string;
   image: ImageData;
-  price: string;
   ctaLabel: string;
-  bookingUrl: string;
+  cardURL: string;
 }
 
 export interface FAQ {

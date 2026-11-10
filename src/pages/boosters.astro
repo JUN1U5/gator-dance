@@ -1,0 +1,30 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { site } from '../config/site';
+import ContactCTA from '../components/ContactCTA.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Coaches from '../components/Coaches.astro';
+import FirstVisit from '../components/FirstVisit.astro';
+
+---
+
+<PageLayout
+  seo={{
+    title: 'Dance Boosters',
+    description: `Become a booster for ${site.name}: your support makes our dance program possible.`,
+    image: '/images/GLHS_Dance_2026-88_L.jpg',
+    imageAlt: '',
+  }}
+  hero={{
+    image: { src: '/images/GLHS_Dance_2026-88_L.jpg', alt: '' },
+    title: 'Become a Supporter',
+    words: [{ text: 'Support' }, { text: 'Dance', serif: true }],
+    lead: 'As a booster, sponsor, or patron, you can support the future of the arts, the dance department, and our Green Level dancers!',
+    imagePosition: 'center 55%',
+  }}
+>
+<FirstVisit />  
+<Testimonials />
+  <Coaches />
+ <ContactCTA />
+</PageLayout>

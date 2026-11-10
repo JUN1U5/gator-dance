@@ -1,12 +1,10 @@
-# Yoga Fitness
+# Green Level High School Dance Department
 
-A calm, editorial yoga & wellness studio theme for [Astro](https://astro.build). One rich home page — classes, timetable, coaches, memberships, retreats and more — plus a real blog, a contact page and a custom 404. Static output, almost no JavaScript, and every piece of content lives in small data files you can edit without touching the components.
+The home page for the dance program at Green Level High School, Cary, NC.
 
-![Yoga Fitness home page](docs/featured.jpg)
+![GLHS Dance home page](docs/featured.jpg)
 
-## Demo
-
-**[yoga-fitness-seven.vercel.app](https://yoga-fitness-seven.vercel.app/)**
+**[glhsdance.org](https://glhsdance.org)**
 
 ## Features
 
@@ -43,44 +41,6 @@ A calm, editorial yoga & wellness studio theme for [Astro](https://astro.build).
 
 - **Node.js 22.12.0 or newer** (required by Astro 7). An `.nvmrc` is included.
 - npm 9.6.5+ (or pnpm / yarn)
-
-## Installation
-
-```bash
-git clone https://github.com/Scintillaweb/Yoga-Fitness.git
-cd Yoga-Fitness
-npm install
-```
-
-## Development
-
-```bash
-npm run dev
-```
-
-Open http://localhost:4321.
-
-## Build
-
-```bash
-npm run build
-```
-
-The static site is written to `dist/`.
-
-## Preview
-
-```bash
-npm run preview
-```
-
-Serves the production build locally.
-
-## Type check
-
-```bash
-npm run check
-```
 
 ## Project structure
 

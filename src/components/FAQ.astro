@@ -16,9 +16,13 @@ import { faqSection } from '../data/home';
       {faqs.map((item, i) => (
         <details open={i === 0}>
           <summary>{item.question}<span class="faq__icon" aria-hidden="true"><Icon name="plus" size={14} /></span></summary>
-          <p>{item.answer}</p>
+          <p set:html={item.answer}>{item.answer}</p>
         </details>
       ))}
     </div>
   </div>
 </section>
+
+<style>
+
+</style>

@@ -8,30 +8,29 @@ import { classes } from './classes';
 export const primaryNav: NavigationItem[] = [
   { label: 'Home', href: '/' },
   { label: 'Classes', href: '/#classes' },
-  { label: 'Schedule', href: '/#schedule' },
-  { label: 'Coaches', href: '/#coaches' },
-  { label: 'Pricing', href: '/#pricing' },
-  { label: 'Retreats', href: '/#retreats' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Events', href: '/#schedule' },
+  { label: 'Dance Team', href: '/blog/dance-team' },
+  { label: 'Resources', href: '/blog'},
+  { label: 'Sponsors', href: '/#sponsors'},
+  { label: 'Boosters', href: '/boosters'}
 ];
 
 /** Buttons on the right side of the header. Remove an entry to hide it. */
 export const headerActions = {
-  schedule: { label: 'Schedule', ariaLabel: 'View class schedule', href: '/#schedule' },
-  memberships: { ariaLabel: 'Memberships and class passes', href: '/#pricing' },
+  schedule: { label: 'Tickets', ariaLabel: 'Book tickets for events', href: 'https://glhsdance.ludus.com' },
+  memberships: { ariaLabel: 'Donate and support', href: 'https://glhsdance.ludus.com/donate' },
 };
 
 export const footerColumns: FooterColumn[] = [
   {
-    title: 'Studio',
+    title: 'GLHS Dance',
     links: [
-      { label: 'About', href: '/#approach' },
-      { label: 'Coaches', href: '/#coaches' },
-      { label: 'Pricing', href: '/#pricing' },
-      { label: 'Blog', href: '/blog' },
+      { label: 'Classes', href: '/#classes' },
+      { label: 'Dance Team', href: '/blog/dance-team' },
+      { label: 'Events', href: '/#schedule' },
+      { label: 'Resources', href: '/blog' },
       { label: 'FAQ', href: '/#faq' },
-      { label: 'Contact', href: '/contact' },
+      { label: 'Boosters', href: '/boosters'}
     ],
   },
   {

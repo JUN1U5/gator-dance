@@ -1,6 +1,9 @@
 ---
 import Button from './Button.astro';
 import { visit } from '../data/home';
+import Icon from './Icon.astro';
+import type { IconName } from '../types';
+
 ---
 
 <section class="section" id="visit" aria-labelledby="visit-title">
@@ -8,15 +11,19 @@ import { visit } from '../data/home';
     <div class="visit__intro">
       <h2 id="visit-title">{visit.title}</h2>
       <p>{visit.intro}</p>
-      <Button href={visit.cta.href}>{visit.cta.label}</Button>
+        <Button class="visit__cta" href={visit.cta.href}>{visit.cta.label}</Button>
+        <Button variant=line href={visit.cta2.href}>{visit.cta2.label}</Button>
     </div>
     <ol class="steps">
-      {visit.steps.map((step) => (
-        <li>
-          <h3>{step.title}</h3>
-          <p>{step.description}</p>
-        </li>
-      ))}
+       {visit.steps.map((step) => (
+    <li>
+      <span class="steps__icon">
+       <Icon name={step.icon as IconName} size={18} />
+      </span>
+      <h3>{step.title}</h3>
+      <p>{step.description}</p>
+    </li>
+  ))}
     </ol>
   </div>
 </section>

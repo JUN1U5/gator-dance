@@ -28,12 +28,6 @@ export function businessSchema(siteUrl: URL | undefined): Json {
     description: site.description,
     url: absoluteUrl('/', siteUrl),
     image: absoluteUrl(site.seo.ogImage, siteUrl),
-    openingHoursSpecification: site.hours.map((row) => ({
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: row.days,
-      opens: row.opens,
-      closes: row.closes,
-    })),
     sameAs: site.socials.map((s) => s.href).filter((href) => /^https?:/.test(href)),
   };
   if (!site.isDemo) {

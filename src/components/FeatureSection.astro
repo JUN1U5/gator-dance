@@ -1,0 +1,24 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import Feature from './Feature.astro';
+import { approach } from '../data/home';
+---
+
+<section class="section approach" id="approach" aria-labelledby="approach-title">
+  <div class="container">
+    <SectionHeading
+      id="approach-title"
+      title={approach.title}
+      intro={approach.intro}
+    />
+
+      <Feature
+        title={approach.content.title}
+        text={approach.content.text}
+        image={approach.content.image}
+        cta={approach.content.cta}
+        reverse={true}
+      />
+
+  </div>
+</section>

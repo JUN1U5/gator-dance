@@ -1,0 +1,24 @@
+---
+import Button from './Button.astro';
+import { program } from '../data/home';
+---
+
+<section class="section" id="program" aria-labelledby="program-title">
+  <div class="container program">
+    <div class="program__intro">
+      <h2 id="program-title">{program.title}</h2>
+      <p>{program.intro}</p>
+      <Button href={program.cta.href}>{program.cta.label}</Button>
+    </div>
+    <div class="program__media">
+     <img
+      src="/images/dance-teal.jpg"
+      alt="Dancers"
+      width="900"
+      height="900"
+      loading="lazy"
+      decoding="async"
+    />
+    </div>
+  </div>
+</section>

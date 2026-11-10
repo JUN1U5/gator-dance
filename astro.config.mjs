@@ -7,10 +7,10 @@ import sitemap from '@astrojs/sitemap';
  * Set SITE_URL in your hosting provider (or a local .env file) — or replace
  * the fallback below with your real domain.
  */
-const site = process.env.SITE_URL ?? 'https://yoga-fitness-seven.vercel.app';
+const site = process.env.SITE_URL ?? 'https://glhsdance.org';
 
 /**
- * Optional sub-path, e.g. "/yoga-fitness" for a GitHub Pages project site.
+ * Optional sub-path, e.g. "/dance-team" for a GitHub Pages project site.
  * Leave unset when the site is served from the domain root.
  */
 const base = process.env.BASE_PATH ?? '/';

@@ -16,16 +16,6 @@ import { url } from '../utils/url';
       fetchpriority="high"
     />
     <div class="container hero__inner">
-      {hero.proof && (
-        <div class="hero__proof">
-          <div class="avatars">
-            {hero.proof.avatars.map((avatar) => (
-              <img src={url(avatar.src)} alt={avatar.alt} width="36" height="36" loading="eager" />
-            ))}
-          </div>
-          <p>{hero.proof.label}<strong>{hero.proof.value}</strong></p>
-        </div>
-      )}
       <h1 class="hero__title" id="hero-title">
         {hero.title.map((word, i) => (
           <>

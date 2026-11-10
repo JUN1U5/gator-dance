@@ -30,12 +30,12 @@ function current(href: string): 'page' | 'true' | undefined {
     <div class="header-actions">
       {headerActions.schedule && (
         <a class="btn btn--glass" href={url(headerActions.schedule.href)} aria-label={headerActions.schedule.ariaLabel}>
-          <Icon name="calendar" /><span>{headerActions.schedule.label}</span>
+          <Icon name="ticket" /><span>{headerActions.schedule.label}</span>
         </a>
       )}
       {headerActions.memberships && (
         <a class="icon-btn btn--glass" href={url(headerActions.memberships.href)} aria-label={headerActions.memberships.ariaLabel}>
-          <Icon name="bag" />
+          <Icon name="gift" />
         </a>
       )}
       <MobileMenu />

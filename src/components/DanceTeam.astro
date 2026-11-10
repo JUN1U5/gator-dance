@@ -1,0 +1,20 @@
+---
+import Icon from './Icon.astro';
+import { danceTeam } from '../data/home';
+import { url } from '../utils/url';
+import Button from './Button.astro';
+
+---
+
+<section class="section focus" id="danceteam" aria-labelledby="danceteam-title" data-focus>
+  <div class="container focus__grid">
+    <div class="focus__head">
+      <h2 id="focus-title">{danceTeam.title}</h2>
+      <p>{danceTeam.intro}</p>
+    <Button icon=calendar variant=light href={danceTeam.cta.href}>{danceTeam.cta.label}</Button>
+     </div>
+    <div class="focus__media" id="focus-panel" role="tabpanel"`}>
+      <img src={url(danceTeam.image.src)} alt={danceTeam.image.alt} width="960" height="1200" loading="lazy" decoding="async" />
+      </div>
+  </div>
+</section>

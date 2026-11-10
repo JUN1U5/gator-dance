@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import PageLayout from '../layouts/PageLayout.astro';
+import { site } from '../config/site';
+import FAQ from '../components/FAQ.astro';
+import Classes from '../components/Classes.astro';
+import Program from '../components/Program.astro';
+import Teacher from '../components/Teacher.astro';
+
+---
+
+<PageLayout
+  seo={{
+    title: 'Class Information',
+    description: `Get in touch with ${site.name}: book a free class, ask about memberships or plan a private session.`,
+    image: '/images/dance-teal.jpg',
+    imageAlt: '',
+  }}
+  hero={{
+    image: { src: '/images/dance-teal.jpg', alt: '' },
+    title: 'All the Class Info',
+    words: [{ text: 'All' }, { text: 'class information', serif: true }],
+    lead: 'The Green Level Dance Department is a program that offers beginning-advance level dance classes during the school day as a fine arts credit. Our program focuses on teaching Ballet, Modern/Contemporary, Jazz, Tap, and Choreography. We have one concert each semester filled with both student and teacher choreography from all genres.',
+    imagePosition: 'center 30%',
+  }}
+>
+  <Classes />
+  <Teacher />
+  <FAQ />
+</PageLayout>

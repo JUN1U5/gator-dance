@@ -1,0 +1,25 @@
+---
+import Button from './Button.astro';
+import { teacher } from '../data/home';
+import SectionHeading from '../components/SectionHeading.astro';
+import { url } from '../utils/url';
+---
+
+<section class="section teacher" id="teacher" aria-labelledby="teacher-title" data-focus>
+  <div class="container teacher__grid">
+    <div class="program">
+      <h2 id="teacher-title">{teacher.title}</h2>
+
+      <div class="teacher__media">
+        <img src={url(teacher.image.src)} alt={teacher.image.alt} width="960" height="1200" loading="lazy" decoding="async" />
+      </div>
+    </div>
+
+    <div class="teacher__content">
+      <p class="program__intro">{teacher.intro}</p>
+      <p class="teacher__cta">
+        <Button icon="mail" href={teacher.cta.href}>{teacher.cta.label}</Button>
+      </p>
+    </div>
+  </div>
+</section>

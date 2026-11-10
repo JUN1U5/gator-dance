@@ -3,20 +3,20 @@ import type { SiteConfig } from '../types';
 /**
  * Central site configuration.
  *
- * Change your studio name, contact details, opening hours, social links,
+ * Change your studio name, contact details, social links,
  * form endpoints and SEO defaults here. Everything below is fictional demo
  * content — replace it before you launch.
  *
  * The production URL is set in `astro.config.mjs` (or the SITE_URL env var).
  */
 export const site: SiteConfig = {
-  name: 'Yoga Fitness',
-  logoText: 'yogafitness',
-  tagline: 'Yoga classes, breathwork & mindful movement',
+  name: 'Green Level Dance',
+  logoText: 'Green Level Dance',
+  tagline: 'Green Level High School Dance Department',
   description:
-    'Yoga Fitness offers guided yoga classes, breathwork, retreats and mobility sessions for every level.',
+    'The Green Level Dance Department is a program that offers beginning-advance level dance classes during the school day as a fine arts credit.',
   footerAbout:
-    'A neighborhood studio for mindful movement, steady breath and a community that shows up for each other.',
+    'The Green Level Dance Department is a program that offers beginning-advance level dance classes during the school day as a fine arts credit. Our program focuses on teaching Ballet, Modern/Contemporary, Jazz, Tap, and Choreography. We have one concert each semester filled with both student and teacher choreography from all genres.',
   lang: 'en',
   locale: 'en_US',
 
@@ -25,28 +25,16 @@ export const site: SiteConfig = {
 
   contact: {
     email: 'contact@example.com',
-    phone: '+1 (000) 555-0100',
-    phoneHref: '+10005550100',
+    phone: '(919) 694-9222',
+    phoneHref: '9196949222',
     address: {
-      street: '123 Maplewood Lane, Suite 4B',
-      locality: 'Springfield',
-      region: 'IL',
-      postalCode: '62704',
+      street: '7600 Roberts Rd.',
+      locality: 'Cary',
+      region: 'NC',
+      postalCode: '27519',
       country: 'USA',
     },
   },
-
-  hours: [
-    {
-      label: 'Mon to Fri',
-      hours: '6:00 to 21:00',
-      days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '06:00',
-      closes: '21:00',
-    },
-    { label: 'Saturday', hours: '7:00 to 18:00', days: ['Saturday'], opens: '07:00', closes: '18:00' },
-    { label: 'Sunday', hours: '8:00 to 14:00', days: ['Sunday'], opens: '08:00', closes: '14:00' },
-  ],
 
   // Replace these with your own profile URLs.
   socials: [
@@ -56,7 +44,7 @@ export const site: SiteConfig = {
     { label: 'Website', href: 'https://example.com/', icon: 'globe' },
   ],
 
-  bookingUrl: '/contact',
+  bookingUrl: 'https://glhsdance.ludus.com/',
 
   forms: {
     // e.g. 'https://formspree.io/f/your-form-id' — see README › Contact form.
@@ -65,13 +53,13 @@ export const site: SiteConfig = {
   },
 
   seo: {
-    defaultTitle: 'Yoga Fitness | Yoga Classes, Breathwork & Mindful Movement',
+    defaultTitle: 'Green Level High School Dance Department | Dance Team',
     titleSeparator: '|',
     ogImage: '/og-default.jpg',
-    ogImageAlt: 'A woman meditating cross-legged in tall grass at sunset',
+    ogImageAlt: 'GLHS Dancers performing on stage',
     twitterHandle: '',
     themeColor: '#F5F4F1',
   },
 
-  copyright: 'Yoga Fitness. All rights reserved.',
+  copyright: 'Green Level VAD Boosters.',
 };

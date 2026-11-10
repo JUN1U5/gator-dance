@@ -16,17 +16,17 @@ const categories = [...new Set(posts.map((p) => p.data.category))];
 
 <PageLayout
   seo={{
-    title: 'Journal',
-    description: 'Practical notes from our coaches on yoga, breathwork, mobility and building habits that last.',
+    title: 'From Dulas Desk',
+    description: 'Practical notes for dancers, students, and families.',
     image: '/images/page-blog.webp',
     imageAlt: 'Two smooth stones balanced on a mossy ledge in warm light',
     schema: [breadcrumbSchema([{ name: 'Home', href: '/' }, { name: 'Blog', href: '/blog/' }], Astro.site)],
   }}
   hero={{
     image: { src: '/images/page-blog.webp', alt: '' },
-    title: 'The Journal',
-    words: [{ text: 'The' }, { text: 'Journal', serif: true }],
-    lead: 'Practical notes from our coaches on movement, breath and building habits that last.',
+    title: 'From Dulas Desk',
+    words: [{ text: 'From' }, { text: 'Dula\'s Desk', serif: true }],
+    lead: 'Practical notes for dancers, students, and families.',
     breadcrumbs: [{ name: 'Home', href: '/' }, { name: 'Blog', href: '/blog/' }],
   }}
 >
@@ -77,5 +77,4 @@ const categories = [...new Set(posts.map((p) => p.data.category))];
     </section>
   )}
 
-  <Newsletter flush={false} />
 </PageLayout>

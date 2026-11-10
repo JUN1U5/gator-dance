@@ -32,7 +32,8 @@ export type IconName =
   | 'heart'
   | 'cap'
   | 'music'
-  | 'ticket';
+  | 'ticket'
+  | 'note';
 
 export interface ImageData {
   /** Path inside `public/`, e.g. `/images/class-hatha.webp`. */

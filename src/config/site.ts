@@ -36,12 +36,13 @@ export const site: SiteConfig = {
     },
   },
 
-  // Replace these with your own profile URLs.
+  // Replace these with profile URLs.
   socials: [
-    { label: 'Instagram', href: 'https://www.instagram.com/', icon: 'camera' },
-    { label: 'YouTube', href: 'https://www.youtube.com/', icon: 'play' },
-    { label: 'WhatsApp', href: 'https://www.whatsapp.com/', icon: 'chat' },
-    { label: 'Website', href: 'https://example.com/', icon: 'globe' },
+    { label: 'Instagram', href: 'https://www.instagram.com/g_l_dance', icon: 'camera' },
+    { label: 'Instagram', href: 'https://www.instagram.com/gl_danceteam', icon: 'camera' },
+    { label: 'Email', href: 'mailto:adula2@wcpss.net', icon: 'mail'},
+    { label: 'Website', href: 'https://greenlevelhs.wcpss.net/', icon: 'globe' },
+     // { label: 'YouTube', href: 'https://www.youtube.com/', icon: 'play' },
   ],
 
   bookingUrl: 'https://glhsdance.ludus.com/',

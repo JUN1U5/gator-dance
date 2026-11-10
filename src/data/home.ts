@@ -181,7 +181,7 @@ export const cta = {
   /** `{lotus}` renders the small lotus chip. The Mat Is Where\nChange {lotus} Begins',*/
   title: 'Green Level Dancers\nNeed Your Support',
   intro: 'Invest in the future of the arts and our Green Level dancers!',
-  button: { label: 'Become a Booster!', href: '/booster' } satisfies CallToAction,
+  button: { label: 'Become a Booster!', href: '/boosters' } satisfies CallToAction,
   contactLabel: 'Get in touch with us',
   image: { src: '/images/Dance_IMG_3235_L.JPG', alt: '' } satisfies ImageData,
   marquee: { before: 'Dance,', emphasis: 'Dance' },

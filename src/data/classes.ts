@@ -1,5 +1,9 @@
 import type { DanceClass } from '../types';
 
+/**
+ * Edit class information here. The `href` field can point to a Google Doc, subpage, or any other resource that provides more information about the class.
+ */
+
 export const classes: DanceClass[] = [
   {
     title: 'Dance I',

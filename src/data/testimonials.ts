@@ -1,6 +1,6 @@
 import type { Testimonial } from '../types';
 
-// Sample stories for the demo. Replace with real, permission-granted member quotes.
+// Testimonials from students or others. Fields include `quote`, `name`, `role`, and an `image` object with `src` and `alt` strings.
 export const testimonials: Testimonial[] = [
   {
     quote:

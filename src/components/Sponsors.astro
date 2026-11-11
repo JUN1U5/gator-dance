@@ -1,18 +1,18 @@
 ---
 import SectionHeading from './SectionHeading.astro';
 import Button from './Button.astro';
-import CoachCard from './CoachCard.astro';
-import { coaches } from '../data/coaches';
+import SponsorCard from './SponsorCard.astro';
+import { sponsors } from '../data/sponsors';
 import { sponsorsSection } from '../data/home';
 ---
 
 <section class="section section--mist" id="sponsors" aria-labelledby="sponsors-title">
   <div class="container">
-    <SectionHeading id="coaches-title" title={sponsorsSection.title} intro={sponsorsSection.intro}>
+    <SectionHeading id="sponsors-title" title={sponsorsSection.title} intro={sponsorsSection.intro}>
       {sponsorsSection.cta && <Button href={sponsorsSection.cta.href} variant="line">{sponsorsSection.cta.label}</Button>}
     </SectionHeading>
-    <div class="coaches__grid">
-      {coaches.map((coach) => <CoachCard coach={coach} />)}
+    <div class="sponsors__grid">
+      {sponsors.map((sponsor) => <SponsorCard sponsor={sponsor} />)}
     </div>
   </div>
 </section>

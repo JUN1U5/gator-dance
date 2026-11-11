@@ -1,0 +1,29 @@
+---
+import type { Sponsor } from '../types';
+import Icon from './Icon.astro';
+import { url } from '../utils/url';
+
+interface Props {
+  sponsor: Sponsor;
+}
+
+const { sponsor } = Astro.props;
+---
+
+<article class="sponsor">
+  <div class="sponsor__media">
+    <img src={url(sponsor.image.src)} alt={sponsor.image.alt} width="720" height="960" loading="lazy" decoding="async" />
+    {sponsor.socials.length > 0 && (
+      <div class="sponsor__social">
+        {sponsor.socials.map((social) => (
+          <a href={url(social.href)} aria-label={social.label}>
+            <Icon name={social.icon} size={15} />
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+  <h3>{sponsor.name}</h3>
+  <p>{sponsor.role}</p>
+  {sponsor.bio && <p class="sponsor__bio">{sponsor.bio}</p>}
+</article>

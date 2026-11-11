@@ -1,5 +1,9 @@
 import type { FAQ } from '../types';
 
+/**
+ * Edit the FAQ content here. Each item has a `question` and an `answer` string.
+ */
+
 export const faqs: FAQ[] = [
   {
     question: 'How do I register for Dance 1 (Beginning Dance)?',

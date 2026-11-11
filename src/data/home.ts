@@ -2,7 +2,7 @@ import type { CallToAction, FocusArea, GalleryImage, HeroWord, ImageData, VisitS
 
 /**
  * Copy and images for the home-page sections.
- * Lists (classes, schedule, coaches, pricing, …) live in their own files.
+ * Lists (classes, schedule, sponsors, pricing, …) live in their own files.
  * A `\n` inside a title becomes a line break.
  */
 

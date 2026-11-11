@@ -9,7 +9,7 @@ The home page for the dance program at Green Level High School, Cary, NC.
 ## Features
 
 - **Astro 7**, static output, no UI framework
-- Calm, premium yoga/wellness design with an editorial serif + sans type pairing
+- Calm, premium design with an editorial serif + sans type pairing
 - Responsive layout from 320px phones to wide desktops
 - Home page sections: hero, approach, classes, interactive practice focus (tabs + image hotspots), weekly schedule, coaches, first-visit steps, memberships with monthly/yearly toggle, member stories slider, gallery, retreats & workshops, FAQ, latest posts, newsletter and a contact call-to-action
 - Blog powered by an Astro content collection: index with featured post, article pages with breadcrumbs, metadata, tags and related posts
@@ -66,27 +66,25 @@ The home page for the dance program at Green Level High School, Cary, NC.
     └── types.ts            Types for all config and data
 ```
 
-Only these routes exist: `/`, `/contact`, `/blog`, `/blog/[slug]` and the 404 page. Classes, schedule, coaches, pricing, retreats and FAQ are sections of the home page, linked with `/#classes`, `/#schedule` and so on, so they work from every page.
+Only these routes exist: `/`, `/contact`, `/blog`, `/blog/[slug]` and the 404 page. Classes, schedule, sponsors, and FAQ are sections of the home page, linked with `/#classes`, `/#schedule` and so on, so they work from every page.
 
 ## Customization
 
 | What | Where |
 |---|---|
-| Studio name, word mark, tagline, description | `src/config/site.ts` |
-| Email, phone, address, opening hours | `src/config/site.ts` → `contact`, `hours` |
+| Program name, word mark, tagline, description | `src/config/site.ts` |
+| Email, phone, address | `src/config/site.ts` → `contact` |
 | Social links | `src/config/site.ts` → `socials` (icons: `camera`, `play`, `chat`, `globe`, …) |
 | SEO defaults, social image, theme color | `src/config/site.ts` → `seo` |
 | Production URL | `SITE_URL` env var or the fallback in `astro.config.mjs` |
 | Navigation & footer links | `src/data/navigation.ts` |
-| Hero, approach, focus areas, first-visit steps, gallery, section titles, CTA | `src/data/home.ts` |
+| Hero, teacher, gallery, section titles, CTA | `src/data/home.ts` |
 | Classes | `src/data/classes.ts` |
-| Weekly schedule | `src/data/schedule.ts` |
-| Coaches | `src/data/coaches.ts` |
-| Memberships & prices | `src/data/pricing.ts` |
-| Member stories | `src/data/testimonials.ts` |
-| Retreats & workshops | `src/data/retreats.ts` |
+| Events schedule | `src/data/schedule.ts` |
+| Sponsors | `src/data/sponsors.ts` |
+| Dancer stories | `src/data/testimonials.ts` |
 | FAQ | `src/data/faq.ts` |
-| Blog posts | `src/content/blog/*.md` |
+| Blog posts, resources | `src/content/blog/*.md` |
 | Colors, type scale, radii, spacing | `src/styles/tokens.css` |
 
 **Logo.** The flower monogram is the `i-logo` symbol in `src/components/icons/IconSprite.astro`; the word mark comes from `site.logoText`. Update `public/favicon.svg` with the same artwork.
@@ -97,15 +95,7 @@ Only these routes exist: `/`, `/contact`, `/blog`, `/blog/[slug]` and the 404 pa
 
 **Hero.** `hero` in `src/data/home.ts`: the headline words (`serif: true` renders a word in italic serif), description, button, image and the member-count badge (remove `proof` to hide it).
 
-**Approach pillars.** `approach.pillars` in `src/data/home.ts` is split in two: the first half is listed left of the image, the rest on the right (they stack on smaller screens).
-
-**Focus hotspots.** Each focus area has `x` / `y` percentages that position its hotspot over the image. Adjust them if you change the photo.
-
 **Schedule.** One entry per day; each class needs `time`, `period`, `className`, `instructor`, `duration` and can take an optional `level` and `bookingUrl`. "Reserve" falls back to `site.bookingUrl`.
-
-**Pricing.** Each plan has `monthlyPrice` and `yearlyPrice`; set `featured: true` for the dark card. Currency and labels are in `pricing`. CTAs default to `/contact`; point `ctaUrl` at your booking or checkout page. No payment system is included.
-
-**Retreats.** Use ISO dates (`2026-11-14`); the card formats them. Point `bookingUrl` at your booking platform.
 
 **Images.** Put files in `public/images/` and reference them as `/images/your-file.webp`. Always write meaningful `alt` text; use `alt: ''` only for decorative images. Recommended sizes: hero 2200×1400, page heroes 2000×1125, class cards 900×720, coaches 720×960, retreats 800×1000, blog 1600×1000.
 
@@ -174,25 +164,8 @@ Attribution is not required, but sources are listed here for transparency:
 
 | File (`public/images/`) | Source |
 |---|---|
-| `avatar-01.webp` | [pxhere.com/en/photo/1338081](https://pxhere.com/en/photo/1338081) |
-| `avatar-02.webp` | [pxhere.com/en/photo/868153](https://pxhere.com/en/photo/868153) |
-| `avatar-03.webp` | [pxhere.com/en/photo/761298](https://pxhere.com/en/photo/761298) |
-| `blog-01.webp` | [pxhere.com/en/photo/660599](https://pxhere.com/en/photo/660599) |
 | `blog-02.webp` | [pxhere.com/en/photo/1127997](https://pxhere.com/en/photo/1127997) |
-| `blog-03.webp` | [pxhere.com/en/photo/1223742](https://pxhere.com/en/photo/1223742) |
-| `blog-04.webp` | [pxhere.com/en/photo/1223745](https://pxhere.com/en/photo/1223745) |
 | `blog-05.webp` | [pxhere.com/en/photo/956878](https://pxhere.com/en/photo/956878) |
-| `blog-06.webp` | [pxhere.com/en/photo/780205](https://pxhere.com/en/photo/780205) |
-| `class-breathwork.webp` | [pxhere.com/en/photo/1058656](https://pxhere.com/en/photo/1058656) |
-| `class-hatha.webp` | [pxhere.com/en/photo/1067181](https://pxhere.com/en/photo/1067181) |
-| `class-power.webp` | [pxhere.com/en/photo/1622675](https://pxhere.com/en/photo/1622675) |
-| `class-prenatal.webp` | [pxhere.com/en/photo/711905](https://pxhere.com/en/photo/711905) |
-| `class-vinyasa.webp` | [pxhere.com/en/photo/1344475](https://pxhere.com/en/photo/1344475) |
-| `class-yin.webp` | [pxhere.com/en/photo/661341](https://pxhere.com/en/photo/661341) |
-| `coach-01.webp` | [pxhere.com/en/photo/1622676](https://pxhere.com/en/photo/1622676) |
-| `coach-02.webp` | [pxhere.com/en/photo/1391675](https://pxhere.com/en/photo/1391675) |
-| `coach-03.webp` | [pxhere.com/en/photo/1064613](https://pxhere.com/en/photo/1064613) |
-| `coach-04.webp` | [pxhere.com/en/photo/1094338](https://pxhere.com/en/photo/1094338) |
 | `cta-coast.webp` | [pxhere.com/en/photo/7904](https://pxhere.com/en/photo/7904) |
 | `focus-seated.webp` | [pxhere.com/en/photo/1084638](https://pxhere.com/en/photo/1084638) |
 | `gallery-01.webp` | [pxhere.com/en/photo/1338804](https://pxhere.com/en/photo/1338804) |
@@ -202,25 +175,17 @@ Attribution is not required, but sources are listed here for transparency:
 | `retreat-01.webp` | [pxhere.com/en/photo/1179715](https://pxhere.com/en/photo/1179715) |
 | `retreat-02.webp` | [pxhere.com/en/photo/1349125](https://pxhere.com/en/photo/1349125) |
 | `retreat-03.webp` | [pxhere.com/en/photo/6169](https://pxhere.com/en/photo/6169) |
-| `story-01.webp` | [pxhere.com/en/photo/1344434](https://pxhere.com/en/photo/1344434) |
-| `story-02.webp` | [pxhere.com/en/photo/1199720](https://pxhere.com/en/photo/1199720) |
-| `story-03.webp` | [pxhere.com/en/photo/915196](https://pxhere.com/en/photo/915196) |
 | `yoga-hero.webp` | [pxhere.com/en/photo/1175713](https://pxhere.com/en/photo/1175713) |
 | `yoga-meditation.webp` | [pxhere.com/en/photo/820708](https://pxhere.com/en/photo/820708) |
 | `page-contact.webp` | [pxhere.com/en/photo/1058656](https://pxhere.com/en/photo/1058656) (crop of `class-breathwork`) |
 | `page-blog.webp` | [pxhere.com/en/photo/820708](https://pxhere.com/en/photo/820708) (crop of `yoga-meditation`) |
-| `page-404.webp` | [pxhere.com/en/photo/6169](https://pxhere.com/en/photo/6169) (crop of `retreat-03`) |
 | `../og-default.jpg` | [pxhere.com/en/photo/1175713](https://pxhere.com/en/photo/1175713) (crop of `yoga-hero`) |
 
-CC0 covers the photographer's copyright. Some photos show identifiable people; pxhere does not provide model releases. That is fine for a theme demo, but for a live business site you should replace the demo photos with your own studio photography. People named in the demo (coaches, members) are fictional and not the people pictured.
+CC0 covers the photographer's copyright for pxhere images.
 
 ## Icons and SVG
 
 The theme ships its own SVG icon sprite (`src/components/icons/IconSprite.astro`), rendered once per page and used through `<Icon name="…" />`. It includes the flower monogram logo plus calendar, bag, menu, close, arrows, clock, level, pin, check, plus, camera, play, chat, globe, mail, phone, focus and lotus icons. No icon library or icon font is used. To add an icon, add a `<symbol id="i-name">` to the sprite and its name to `IconName` in `src/types.ts`.
-
-## Submitting to the Astro Themes catalog
-
-The [Astro Themes catalog](https://astro.build/themes/) is managed through the [Astro Developer Portal](https://portal.astro.build/themes/submit): sign in with GitHub and submit the public repository, demo URL and screenshots there. The featured image `docs/featured.jpg` is taken from the live demo (1600×900, 16:9, under 200 KB — within the catalog limits of 5 MB, 16:9, 1280px+).
 
 ## License
 

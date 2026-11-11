@@ -1,8 +1,8 @@
-import type { Coach } from '../types';
+import type { Sponsor } from '../types';
 
-// Optional: add `bio: '…'` to show a short line under the role.
-// Replace the social URLs with each coach's real profiles (or remove them).
-export const coaches: Coach[] = [
+// Add sponsors here. Each item has a `name`, `role`, `image` object, and an array of `socials` objects. The `image` object has a `src` and an `alt` string. Each `socials` object has a `label`, `href`, and an `icon` string.
+
+export const sponsors: Sponsor[] = [
   {
     name: 'Gator Realty',
     role: '2026 Swamp Sponsor',

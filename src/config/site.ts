@@ -1,14 +1,15 @@
 import type { SiteConfig } from '../types';
 
 /**
- * Central site configuration.
+ * Central site configuration. Edit key site details.
  *
- * Change your studio name, contact details, social links,
- * form endpoints and SEO defaults here. Everything below is fictional demo
- * content — replace it before you launch.
+ * Change the site name, contact details, social links,
+ * form endpoints and SEO defaults here.
  *
  * The production URL is set in `astro.config.mjs` (or the SITE_URL env var).
+ * If you're looking for other content, see `src/data/` files, including faq.ts, navigation.ts, schedule.ts, and home.ts.
  */
+
 export const site: SiteConfig = {
   name: 'Green Level Dance',
   logoText: 'Green Level Dance',
@@ -21,7 +22,7 @@ export const site: SiteConfig = {
   locale: 'en_US',
 
   // Demo mode keeps the placeholder address and phone number out of structured data.
-  isDemo: true,
+  isDemo: false,
 
   contact: {
     email: 'contact@example.com',

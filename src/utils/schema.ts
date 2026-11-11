@@ -15,7 +15,7 @@ export function websiteSchema(siteUrl: URL | undefined): Json {
 }
 
 /**
- * Studio details for search engines. While `site.isDemo` is true the
+ * Program details for search engines. While `site.isDemo` is true the
  * placeholder address, phone and email are left out on purpose.
  */
 export function businessSchema(siteUrl: URL | undefined): Json {

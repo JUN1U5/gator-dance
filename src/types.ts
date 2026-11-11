@@ -148,7 +148,7 @@ export interface ScheduleItem {
   reserveLabel?: string;
 }
 
-export interface Coach {
+export interface Sponsor {
   name: string;
   role: string;
   bio?: string;

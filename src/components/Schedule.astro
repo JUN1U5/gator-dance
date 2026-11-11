@@ -2,10 +2,10 @@
 import SectionHeading from './SectionHeading.astro';
 import { schedule } from '../data/schedule';
 import { scheduleSection } from '../data/home';
-import { site } from '../config/site';
+//import { site } from '../config/site';
 import { url } from '../utils/url';
 
-const initial = 0;
+//const initial = 0;
 ---
 
 <section class="section" id="schedule" aria-labelledby="schedule-title" data-schedule>
@@ -28,12 +28,12 @@ const initial = 0;
               {schedule.map((entry) => (
                 <tr>
                   <td><div class="schedule__time">{entry.date}<small>2026</small></div></td>
-                  <td><div class="schedule__coach">{entry.time}</div></td>
+                  <td><div class="schedule__sponsor">{entry.time}</div></td>
                   <td>
                     <div class="schedule__class">{entry.eventName}</div>
                     {entry.addDetail && <span class="schedule__level">{entry.addDetail}</span>}
                   </td>
-                  <td class="schedule__coach">{entry.location}</td>
+                  <td class="schedule__sponsor">{entry.location}</td>
                  <td>
                    {entry.bookingUrl ? (
                     <a class="btn btn--line" href={url(entry.bookingUrl)}>

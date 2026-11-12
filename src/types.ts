@@ -141,6 +141,7 @@ export interface DanceClass {
 export interface ScheduleItem {
   date: string;
   time: string;
+  year: string;
   eventName: string;
   location: string;
   addDetail?: string;

@@ -27,7 +27,7 @@ import { url } from '../utils/url';
             <tbody>
               {schedule.map((entry) => (
                 <tr>
-                  <td><div class="schedule__time">{entry.date}<small>2026</small></div></td>
+                  <td><div class="schedule__time">{entry.date}<small>{entry.year}</small></div></td>
                   <td><div class="schedule__sponsor">{entry.time}</div></td>
                   <td>
                     <div class="schedule__class">{entry.eventName}</div>

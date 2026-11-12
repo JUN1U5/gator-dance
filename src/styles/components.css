@@ -244,7 +244,7 @@ font-family: var(--font-serif);
    Dance Team Dark Background
    ========================================================= */
 .focus {
-  background: var(--color-ink);
+  background: var(--color-blue-ink);
   color: var(--color-white);
 }
 

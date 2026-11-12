@@ -1,12 +1,14 @@
 /* =========================================================
-   Yoga Fitness — design tokens
+   Green Level Dance — design tokens
    Change colors, type and spacing here; every component reads these.
+   GLHS Brand Colors are --gl-blue and --gl-green here. 
+    See https://greenlevelhs.wcpss.net/brand-identity for more information.
    ========================================================= */
 :root {
   /* Color */
   --color-ink: #1C1B19;
+  --color-blue-ink: #0e253b;
   --color-stone: #6F6C66;
-  /* Original value #A3A09A, darkened to meet WCAG AA (4.5:1) for small text on white and mist. */
   --color-muted: #72706A;
   --color-line: #E6E4E0;
   --color-mist: #F5F4F1;
@@ -15,6 +17,8 @@
   --glass: rgba(255, 255, 255, .16);
   --glass-strong: rgba(255, 255, 255, .28);
   --color-error: #9B3D2E;
+  --gl-blue: #002E5D;
+  --gl-green: #43B02A;
 
   /* Type — the font files are configured in astro.config.mjs (Astro Fonts API). */
   --font-sans: var(--font-inter-tight), "Inter Tight", "Helvetica Neue", Arial, sans-serif;
